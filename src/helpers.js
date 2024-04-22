@@ -1,10 +1,13 @@
 const path = require('path');
 const { fetchPages } = require('./api');
 const AWS = require('aws-sdk');
+require('dotenv').config();
+
+
 const s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID || "AKIA3FLD5UJENATA67WL",
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "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",
-    region: process.env.AWS_REGION || "us-east-2"
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.AWS_REGION
 });
 
 
@@ -72,7 +75,7 @@ function renderPageFromS3() {
     return async (req, res) => {
         try {
             const page_slug = req.params.page || '';
-           
+
             const page = page_slug + '.html';
             const htmlContent = await fetchHtmlFromS3(page);
             const pages = await fetchPages(page_slug);
@@ -80,7 +83,7 @@ function renderPageFromS3() {
             const title = pages.title;
 
             if (htmlContent) {
-                res.render('page', { title:title, content: htmlContent, meta_seo:meta_seo});
+                res.render('page', { title: title, content: htmlContent, meta_seo: meta_seo });
             } else {
                 res.status(404).send('Page not found');
             }
