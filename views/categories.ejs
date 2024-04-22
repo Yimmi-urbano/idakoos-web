@@ -1717,7 +1717,8 @@ figcaption.info .cant_prd{position: absolute; right: 5px; bottom: 10px;}
 <script>
 $(document).ready(function(){
 
-  var hostname1 = window.location.hostname.replace("www.","");
+  //var hostname1 = window.location.hostname.replace("www.","");
+  var hostname1 = "idakoos.com";
   https://storage.googleapis.com/sspe-appv20-resources/sami3.samishop.pe/recursos/form.html?domain=2idakoos.samishop.pe&amp;idform=formulario%20footer
 
   if(hostname1!="sami3.samishop.pe"){
@@ -1878,7 +1879,8 @@ $(document).ready(function(){
             console.log("Ingresa un correo válido");
             $(".notificaEmail").html("Invalid e-mail");
           } else if (correo != "" && testEmail.test(correo)) {
-            var hostname1 = window.location.hostname.replace("www.", "");
+            //var hostname1 = window.location.hostname.replace("www.", "");
+            var hostname1 = "idakoos.com";
             var settings = {
               url: "https://api-clients.samishop.pe/forms/field",
               method: "PUT",
