@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Iniciar sesión | Idakoos Perú</title>
+<title>Mi cuenta | Idakoos Perú</title>
 <meta name="description" content=""/>
 <meta name="keywords" content=" "/>
 
 <!--Open Graph-->
 <!-- og tags Facebook -->
-<meta property="og:title" content="Iniciar sesión | Idakoos Perú" />
+<meta property="og:title" content="Mi cuenta | Idakoos Perú" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.idakoos.pe/process" />
+<meta property="og:url" content="https://www.idakoos.pe/info" />
 <meta property="og:image"content=""/>
-<meta property="og:site_name" content="idakoos.pe/process" />
+<meta property="og:site_name" content="idakoos.pe/info" />
 <meta property="og:description"content=""/> 
 
 
@@ -55,8 +55,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 -->
 <meta name="urlDomainDefault" id="urlDomainDefault" content="idakoos.pe">
 <meta name="urlCdnStorageDefault" id="urlCdnStorageDefault" content="https://storage.googleapis.com/sspe-appv20-resources/idakoos.pe">
-
-<script src="https://scripts.winwinafi.com/tracking.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -1080,453 +1078,1339 @@ figcaption.info .cant_prd{position: absolute; right: 5px; bottom: 10px;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- body -->
-<script>
-    $("header,#menu_mobile_flip, .section_breadcrumb").addClass("d-none");
-    $("header,#menu_mobile_flip, .section_breadcrumb").remove();
-    $("#header_catalog").removeClass("d-none");
-</script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer ></script>
-<script src="https://idks-rsrs-content.s3.amazonaws.com/lab2/js/jquery.cookie.js"></script>
-<script>
-  if($.cookie("account_login")!=undefined || $.cookie("account_login")!=null){
-    /*var hostname1 = $("#urlDomainDefault").attr("content");
-    var cnm1 = hostname1+"_cookie_checkout1";
-    var mdd = localStorage.getItem(cnm1);
-
-    if(mdd==null){
-      window.location.href = "/info/mi_cuenta.html";
-    } else if(mdd!=null){
-        var ps = JSON.parse(mdd);
-        var prd = ps["products"];
-        if(prd.length>0){
-          window.location.href = "/process/checkout.html";
-        } else {
-          window.location.href = "/info/mi_cuenta.html";
-        }
-    }*/
-    window.location.href = "/info/myAccount";
-
-  }
-</script>
 <!--
-<link href="[[URL_CDN_STORAGE]]/css/login.css?v=[[VERSION_URL]]"rel="stylesheet"type="text/css"/>
+<link href="https://s3.us-east-2.amazonaws.com/m.idakoos.com/plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://s3.us-east-2.amazonaws.com/m.idakoos.com/plugins/noUiSlider/nouislider.min.js"></script>
 -->
-<style>
-  .contenido {
-    background: #ffffff;
-  }
-  .content_iniciarsesion {
-    background: #fff;
-    padding: 20px;
-  }
-  /*  .card-title {
-    margin-bottom: 0 !important;
-  } */
-  .btn_continuar,
-  .btn_continuar:hover,
-  .btn_continuar:active,
-  .btn_continuar:focus,
-  .btn_inv,
-  .btn_inv:hover,
-  .btn_inv:active,
-  .btn_inv:focus {
-    border-radius: unset;
-    padding: 8px 25px;
-    color: #fff;
-    border: none;
-    background: #19485A !important;
-    display: block;
-    width: 100%;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .separador {
-    position: relative;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-  .separador hr {
-    width: 100%;
-  }
-  .separador .mv {
-    width: 40px;
-    height: 30px;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 9px;
-    bottom: 0;
-    text-align: center;
-    margin: 0 auto;
-  }
-  #reg_fb,
-  #reg_google {
-    padding: 12px;
-  }
-  .btn_reg,
-  .btn_reg:hover {
-    border-radius: unset;
-    padding: 12px 25px;
-    color: #000;
-    border: 1px solid #000;
-    background: #fff;
-    display: block;
-    width: 100%;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 16px;
-  }
-  .btn_reg b {
-    color: #000;
-  }
-  .link_p,
-  .link_p:hover {
-    color: #000;
-    text-decoration: underline;
-    font-weight: 600;
-  }
-  .card {
-    margin-bottom: 20px;
-    border: none;
-  }
-  .contenido h4 {
-    color: #000;
-  }
-  #mesagge_login {
-    text-align: center;
-    min-height: 20px;
-    color: red;
-    font-weight: 600;
-  }
+<script src="https://s3.us-east-2.amazonaws.com/m.idakoos.com/js/jquery.cookie.js"></script>
+<script>
+	$("header,#menu_mobile_flip").addClass("d-none");
+	$("header,#menu_mobile_flip").remove();
+	$("#header_profile").removeClass("d-none");
+</script>
+<script>
+		if($.cookie("account_login") === null || $.cookie("account_login") === undefined){
+				window.location.replace("/process/logind.html");
+		}
+</script>
 
-  @media (min-width: 1200px) {
-    /*.content_iniciarsesion > div:nth-child(3) {
-      border-right: 1px solid #ddd;
-    }*/
-  }
+<link href="https://s3.us-east-2.amazonaws.com/m.idakoos.com/css/miperfil2.css" rel="stylesheet" type="text/css">
+<link href="https://idks-rsrs-content.s3.amazonaws.com/lab2/css/select2.min.css" rel="stylesheet" />
+<script src="https://idks-rsrs-content.s3.amazonaws.com/lab2/js/select2.min.js"></script>
+<input type="hidden" id="summb">
+<div id="lodm">Clonando...</div>
+<section class="section-content padding-y perfil_content">
+<div class="container">
+<!--
+<div class="row">
+	<div class="col-md-12">
+		<button class="btn btn_opciones"><i class="fas fa-bars"></i> Menú</button>
+	</div>
+</div>
+-->
+<div class="row mb-3">
+	<div class="col-md-12">
+		<button class="btn sidebar-collapser"><i class="fas fa-bars"></i> Menú</button>
+	</div>
+</div>
+<!-- <input type="hidden" id="dni_usuario" value="45464546">
+<input type="hidden" id="cod_usuario" value="peDNI45464546"> -->
+<!-- =========================  COMPONENT MYORDER 1 ========================= --> 
+<div class="row">
+	<aside class="col-md-12 col-lg-3 sidebar_opciones">
 
-  @media (max-width: 1199px) and (min-width: 768px){
-    .bmf{display: none;}
-  }
-</style>
+		<div class="section_user">
+			<div class="text-right txt_edit"></div>
+			<div class="section_usr">
+			<img src="" class="" width="80" height="80">
+			<div class="mperfil">
+				<div class="h6">Mi perfil</div>
+				<div class="h4"></div>
+			</div>
+			</div>
+		</div>
+		
+		<!--   SIDEBAR   -->
+		<ul class="list-group nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			
+			<li>
+				<a class="nav-link list-group-item active" id="v-info_Cat" data-toggle="pill" role="tab" href="#info_cat" aria-selected="true" aria-controls="info_cat">
+				<i class="fas fa-tshirt"></i> <span>Productos</span></a>
+			</li>
+			<li>
+				<a class="nav-link list-group-item" id="v-info_pers" data-toggle="pill" role="tab" href="#info_pers" aria-selected="true" aria-controls="info_pers">
+				<i class="fas fa-user"></i> <span>Mi perfil</span> </a>
+			</li>
+			<li>
+				<a class="nav-link list-group-item" id="v-mis_disenos" data-toggle="pill" role="tab" href="#mis_disenos" aria-selected="false" aria-controls="mis_disenos">
+					<i class="fas fa-palette"></i> <span>Mis Diseños</span> </a>
+			</li>
+			<!--
+			<li>
+				<a class="nav-link list-group-item" id="v-mis_pedidos" data-toggle="pill" role="tab" href="#mis_pedidos" aria-selected="false" aria-controls="mis_pedidos">
+				<i class="fas fa-shopping-bag"></i> <span>Mis compras</span> </a>
+			</li>
+			-->
+			<li>
+				<a class="nav-link list-group-item" id="v-vende_otros" data-toggle="pill" role="tab" href="#vende_otros" aria-selected="false" aria-controls="vende_otros">
+					<i class="fas fa-shopping-basket"></i> <span>Mis ventas</span> </a>
+			</li>
+			
+			<li>
+				<a class="nav-link list-group-item" id="v-mi_d_cuenta" data-toggle="pill" role="tab" href="#mi_d_cuenta" aria-selected="false" aria-controls="mi_d_cuenta">
+					<i class="fas fa-cog"></i> <span>Configuración</span></a>
+			</li>
+			<li class="btn_csession"></li>
+			<li class="catalogo_enlace d-none mt-3">
+				<a class="nav-link list-group-item btn_iraPgDes" target="_blank" href="#"><i class="fas fa-th-large"></i> <span>Mi catálogo</span></a>
+			</li>
+			<li>
+				<a class="nav-link list-group-item" id="v-sol_cobr" data-toggle="pill" role="tab" href="#sol_cobr" aria-selected="true" aria-controls="sol_cobr">
+					<i class="fas fa-wallet"></i> <span>Solicitud de cobranzas</span>
+				</a>
+			</li>
+			<li class="">
+				<a class="nav-link list-group-item btn_cerrarsesion"> <span class="text"><img src="https://s3.us-east-2.amazonaws.com/m.idakoos.com/images/icons/icon-logout.svg" width="20" height="20"> Cerrar sesión</span> </a> 
+			</li>
+			
+			<!-- <span class="text-muted">Configuración de cuenta de comprador</span> -->
+			
+			<!-- <a class="nav-link list-group-item" id="v-mis_beneficios" data-toggle="pill" role="tab" href="#mis_beneficios" aria-selected="false" aria-controls="mis_beneficios"> Mis Beneficios </a> -->
+			<!-- <a class="nav-link list-group-item" id="v-mis_direcciones" data-toggle="pill" role="tab" href="#mis_direcciones" aria-selected="false" aria-controls="mis_direcciones"><i class="fas fa-file"></i> <span>Mis Direcciones</span> </a> -->
+			
+			<!-- <br>
+			<span class="text-muted">Mis diseños</span> -->
+			
+			<!-- <br>
+			<span class="text-muted">Tu catálogo</span> -->
+			
+			<!-- <a class="nav-link list-group-item" id="v-mis_consultas" data-toggle="pill" role="tab" href="#mis_consultas" aria-selected="false" aria-controls="mis_consultas"> Mis consultas </a> -->
+		</ul>
+		
+		<br>
+		<!-- <a class="btn btn-light btn-block " href="" target="_blank"> <span class="text"><i class="fas fa-arrow-alt-circle-right"></i> Ir a tu catálogo</span> </a>  -->
+		
+		<!--   SIDEBAR .//END   -->
+	</aside>
+	<main class="col-md-12 col-lg-9 contg_pef">
+		<div class="tab-content" id="v-pills-tabContent">
 
-<!-- ========================= SECTION CONTENT ========================= -->
-<input id="url_api_back" type="hidden" value="https://api-autenticacion.samishop.pe"/>
-<section class="section-conten padding-y contenido" style="min-height: 84vh">
-  <!-- -->
-  <div class="container">
-    <style>
-      .breadcrb {
-        padding-bottom: 20px;
-      }
-      .breadcrb ol li a,
-      .breadcrb ol li a:hover,
-      .breadcrb ol li a:focus,
-      .breadcrb ol li a:active {
-        color: #000;
-      }
-    </style>
-    <div>
-      <nav class="flex-fill breadcrb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-          <li class="breadcrumb-item active" aria-current="page">
-            Iniciar sesión
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-  <script>
-    $(document).ready(function () {
-      document.title = "Iniciar sesión";
-    });
-  </script>
-  <!-- -->
+		<article class="card tab-pane fade show active" id="info_cat" role="tabpanel" aria-labelledby="v-info_Cat">
 
-  <div>
-    <div class="col-md-12 col-lg-10 m-auto row content_iniciarsesion">
-      <div class="col-12 col-md-4 col-lg-4 col-xl-4"></div>
-      <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-        <!-- ============================ COMPONENT LOGIN   ================================= -->
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title mb-4">Iniciar sesión</h4>
-            <p class="text-center d-none">
-              Ingresa un correo o elige una opción para continuar
-            </p>
-            <div>
-              <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input name="correo"class="form-control"type="email"id="login_email"style="background: white"/> 
-              </div>
-              <!-- form-group// -->
-              <div class="form-group">
-                <label for="pass">Contraseña:</label>
-                <input name="pass"class="form-control"type="password"id="login_password"style="background: white"/> 
-              </div>
-              <!-- form-group// -->
 
-              <div class="form-group">
-                <div id="google_recaptcha" class="d-none"></div>
-                <button type="button"class="btn btn-primary btn-block btn_continuar"id="button_login"> Continuar </button>
-              </div>
-              <div class="form-group text-center mb-0">
-                <a href="/info/recoverypwd.html" class="link_p">Olvidé mi contraseña</a>
-              </div>
-              <!-- form-group// -->
-              <div id="mesagge_login"></div>
+			<!-- <div class="bn_eventos_fam">
+				<div class="img-PC">
+					<div class="banner_001">
+						<img class="img-fluid w-100" src="https://storage.googleapis.com/sspe-appv20-resources/tupolo.pe/images/banners/banner_tupolo_3.webp" alt="Grandes pedidos, grandes descuentos. ¡Compra al por mayor en Tupolo!" width="1920" height="550" loading="lazy">
+						<div class="container-fluid sect_mm00">
+							<div class="row">
+								<div class="col-md-6"><br></div>
+								<div class="col-md-6 text-center sect_dsc_bn">
+									<div class="txtsubt">Grandes pedidos, grandes descuentos</div>
+									<h1><span class="color_text2">¡COMPRA AL POR MAYOR EN TUPOLO!</span></h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="img-Mov">
+					<div class="banner_002">
+						<img class="img-fluid w-100" src="https://storage.googleapis.com/sspe-appv20-resources/tupolo.pe/images/banners/banner_tupolo_3_web.webp?v=0034" alt="Grandes pedidos, grandes descuentos. ¡Compra al por mayor en Tupolo!" width="625" height="635" loading="lazy">
+						<div class="container-fluid sect_mm00">
+							<div class="row">
+								<div class="col-md-6"><br></div>
+								<div class="col-md-6 text-center sect_dsc_bn">
+									<div class="txtsubt">Grandes pedidos, grandes descuentos</div>
+									<h1><span class="color_text2">¡COMPRA AL POR MAYOR EN TUPOLO!</span></h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 pt-3">
+						<div class="h5 titl_catg">Sugerencias para ti</div>
+						<p>Elige tu producto</p>
+						<hr>
+					</div>
 
-              <div class="form-group separador d-none">
-                <hr />
-                <div class="mv">O</div>
-              </div>
+				</div>
+			</div>
 
-              <!-- <div class="form-group row">
-                          <div class="col-md-6">
-                            <a href="#" class="btn btn-facebook btn-block " id="reg_fb"> Registrarme con &nbsp;<i class="fab fa-facebook-square fa-lg"></i> </a>
-                          </div>
-                          <div class="col-md-6">
-                            <a href="#" class="btn btn-light btn-block " id="reg_google"> Registrarme con &nbsp; <img src="https://storage.googleapis.com/sspe-blnc-rscs/00000E62/PNG/1google_icon.png" width="20"> </a>
-                          </div>
-                        </div> -->
+			<div class="container-fluid btn_filter">
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-primary btn_filtr">FILTROS</button>
+					</div>
+				</div>
+			</div>
 
-              <div class="form-group" id="ocultar-derecho">
-                <h4 class="card-title mb-4">¿La primera vez aquí?</h4>
+			<div class="container-fluid section_catalogo">
 
-                <div class="form-group">
-                  <a href="/info/registrod.html" class="btn btn-primary btn_inv">Regístrate ahora</a > 
-                </div>
-                <!-- form-group// -->
-              </div>
-            </div>
-          </div>
-          <!-- card-body.// -->
-        </div>
+				<div class="row">
+					<div class="col-md-12 col-lg-3 column_filtr">
+
+						<div class="cls_filtr text-right mt-3">
+							<span class="">Cerrar [<i class="fas fa-times"></i>]</span>
+						</div>
+
+						<div id="store_products" class="section mt-4">
+							<div class="menu_content" id="sidebar_filter">
+								<div class="item_name_prod">
+									<div class="title-page">
+										CATEGORIAS
+									</div>
+									<ul class="cont_subcat">
+									</ul>
+								</div>
+								<div class="item_var_prod">
+									<article class="filter-group" id="filtrosCatalogo">
+			
+
+									</article> <!-- filter-group .// -->
+									<article class="filter-group" id="filtrosCatalogoHijo">
+				
+									</article>
+								</div>
+								<!--
+								<div class="item_price_prod precio_listado">
+									<div class="title-page1">PRECIOS</div>
+									<ul class="atrb_precio">
+									</ul>
+								</div>
+							-->
+
+								<!--
+								<div class="precio_slider">
+									<div class="title-page1">PRECIOS <button type="button" class="btn btn-primary" id="quitar_precio">Quitar <i class="fas fa-times"></i></button></div>
+									<div class="precio_sldr" id="precio_sldr"></div>
+
+									<div class="mt-4">
+										<div class="row">
+											<div class="col-md-6 col-lg-6">
+												<label for="">Min:</label>
+												<div class="input-group mb-3">
+														<div class="input-group-prepend">
+														<span class="input-group-text" id="basic-addon1">S/</span>
+														</div>
+													<input type="text" class="form-control" id="min_precio" readonly>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-6">
+												<label for="">Max:</label>
+												<div class="input-group mb-3">
+														<div class="input-group-prepend">
+														<span class="input-group-text" id="basic-addon1">S/</span>
+														</div>
+													<input type="text" class="form-control" id="max_precio" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							-->
+								
+
+
+							</div>
+						</div>
+
+
+					</div>
+
+
+
+
+					<div class="col-md-12 col-lg-9">
+						<!-- <div class="h5 mb-4 mt-4">Productos Sugeridos</div> -->
+						<!--
+						<div class="contenido_catg">
+							<div class="container-fluid">
+								<div class="row" id="contenedor_catalogo">
+									<img src="[[URL_CDN_STORAGE]]/images/icons/loading.gif" alt="loading" width="64" height="64">
+								</div>
+							</div>
+						</div>
+
+						<nav class="mt-4 pagination_box mb-4" aria-label="Page navigation sample">
+							<div id="pagination-cat-01"></div>
+						</nav>
+						-->
+
+
+						<div class="contenido_catg2">
+							<div class="container-fluid">
+								<!--
+								<div class="row mb-2 mt-2">
+									<div class="col-md-12 text-right">
+										<div class="form-group">
+											<label for="colorList">Seleccionar color:</label>
+											<select class="form-control" id="colorList"></select>
+										</div>
+									</div>
+								</div>
+								-->
+
+								<div class="row" id="contenedor_catalogo2">
+									<img src="https://idks-rsrs-content.s3.amazonaws.com/lab2/images/icons/loading.gif" alt="loading" width="64" height="64" style="margin: 0 auto;">
+								</div>
+							</div>
+						</div>
+						<nav class="mt-4 pagination_box2 mb-4" aria-label="Page navigation sample">
+							<div id="pagination-cat-02"></div>
+						</nav>
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="detalleProducto1">
+				<div class="modal-dialog modal_box modal-md ">
+					<div class="modal-content mt-5">
+
+						<div class="modal-header header-style">
+							<h5 class="modal-title"></h5>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<div class="modal-body">
+							<div class="row contenido_prd">
+								<div class="col-md-2 img_box">
+									<div class="img_prdh_pe"></div>
+								</div>
+								<div class="col-md-6 img_prdh">
+
+								</div>
+								<div class="col-md-4 data_prdh">
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="modal fade" id="detalleProducto">
+				<div class="modal-dialog modal_box2 modal-md">
+					<div class="modal-content mt-5">
+
+						<div class="" style="background-color: white;color: black;padding: 10px;border-bottom: 1px solid #e4e4e4;/* border-radius: 7px; */border-top-right-radius: 7px;border-top-left-radius: 7px;border-radius: top 7px;">
+							<div class="row">
+								<!-- <div class="col-3"></div> -->
+								<div class="col-12" style="text-align: center;">
+									<h5 class="modal-title">HA SIDO AGREGADO A TU CARRO</h5>
+									<button type="button" class="close" data-dismiss="modal" style="position: absolute;top: 0;right: 10px;opacity: 1;color: #747474;">×</button>
+								</div>
+								<!-- <div class="col-2" style="padding-right: 20px;padding-top: 3px;">
+									
+								</div> -->
+
+
+							</div>
+
+						</div>
+
+						<div class="modal-body">
+
+							<div class="row">
+								<div class="col-md-4">
+									<img src="" id="product-image-modal" class="img-fluid">
+								</div>
+								<div class="col-md-8">
+									<strong id="spnSummItemDet" id="product-title-modal"></strong>
+									<p>
+										<span id="nombre_producto"></span>
+									</p>
+									<div id="sku_prd">
+										<span><b>SKU:</b></span>
+										<i id="product-sku-modal"></i>
+									</div>
+									<div class="cantidad">
+										<span><b>Cantidad:</b></span>
+										<span id="product-quantity-modal"></span>
+									</div>
+									<div class="row col-md-12">
+										<span id="product-modal-variation-title-1"></span>
+										<span id="product-modal-variation-value-1"></span>
+									</div>
+									<div class="row col-md-12">
+										<span id="product-modal-variation-title-2"></span>
+										<span id="product-modal-variation-value-2"></span>
+									</div>
+									<div class="row col-md-12">
+										<span id="product-modal-variation-title-3"></span>
+										<span id="product-modal-variation-value-3"></span>
+									</div>
+
+									<div class=" subtotal">
+										<b><span>Subtotal:</span></b> <b>S/  <span id="product-subtotal-modal"></span></b>
+									</div>
+
+								</div>
+
+								
+
+								<!-- <div class="col-12 row ml-1">
+									<div class="modal-footer col-12 ">
+										<div class="col-12 row ">
+											<div class="col-3">
+
+											</div>
+											<div class="col-4">
+												<button type="button" class=" btn btn-secondary btn_seguirComprando "
+													data-dismiss="modal">Seguir comprando</button>
+											</div>
+
+											<div class="col-3">
+												<button type="button" class=" btn btn-dark btn_irPagar "
+													id="product-purcharse-modal" name="[[PRODUCT_SKU]]">Ir a pagar <i
+														class="fas fa-chevron-right"></i></button>
+											</div>
+
+
+
+										</div>
+									</div> -->
+
+							</div> <!-- row.// -->
+
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class=" btn btn-secondary btn_seguirComprando "
+								data-dismiss="modal">Seguir comprando</button>
+							<a href="/process/shopcart.html">
+								<button type="button" class=" btn btn-dark btn_irPagar " id="product-purcharse-modal" name="[[PRODUCT_SKU]]">Ir a pagar <i class="fas fa-chevron-right"></i></button>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+
+		</article>
+		<article class="card tab-pane fade" id="info_pers" role="tabpanel" aria-labelledby="v-info_pers">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12 pt-3">
+							<div class="h5 titl_catg">Edita tu perfil</div>
+							<p>Actualiza tus datos</p>
+							<hr>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="card-body">
+			        <div class="alert alert-primary" role="alert" id="alert_info" style="display: none;">
+					  Crea tu catálogo para empezar con un diseño
+					</div>
+
+			      <form>
+			      	<div class="form-row">
+			      		<div class="form-group col-md-6">
+			      			<label for="nomUSR">Nombres (*)</label>
+						  	<input type="text" class="form-control" value="" id="nomUSR">
+			      		</div>
+			      		<div class="form-group col-md-6">
+			      			<label for="apeUSR">Apellidos (*)</label>
+						  	<input type="text" class="form-control" value="" id="apeUSR">
+			      		</div>
+			      	</div>
+			      	<div class="form-row">
+			      		<div class="form-group col-md-6">
+			      			<label for="nomCatgl">Nombre del catálogo (*)</label>
+						  	<input type="text" class="form-control" value="" id="nomCatgl">
+			      		</div>
+			      		<div class="form-group col-md-6">
+			      			<label for="urlCatgl">Url del catálogo (*)</label>
+						  	<input type="text" class="form-control" value="" id="urlCatgl" disabled>
+						  	<div class="d-block" style="flex: 0 0 100%;">
+						      	<div class="ldg d-none">
+						      		<img src="https://idks-rsrs-content.s3.amazonaws.com/lab2/images/icons/loading.gif" alt="loading" width="20" height="20" style="width:20px;height: 20px;">
+						      	</div>
+						      	<div class="alert alert-danger msg_exist_yes d-none" role="alert">
+								  Esta url ya existe, ingrese otra url
+								</div>
+								<div class="alert alert-success msg_exist_no d-none" role="alert">
+								  Url disponible
+								</div>
+						      </div>
+				      		</div>
+			      	</div>
+			      	<div class="form-row">
+			      		<div class="form-group col-md-12">
+						    <label for="desc_account" class="col-form-label">Descripción de catálogo:</label>
+						    <textarea class="form-control" id="desc_account" rows="4" data-lbl="account_description"></textarea>
+					  	</div>
+			      	</div>
+			     	<div class="form-row uploadImg">
+				     	<div class="form-group col-md-6">
+				     		<div class="row">
+				     			<div class="col-md-3">
+				     				<img src="" width="100" height="100" alt="image" class="imgProfile" loading="lazy">
+				     			</div>
+				     			<div class="col-md-9">
+				     				<span>Foto de perfil</span>
+				     				<div>
+				     					<label for="file-upload" class="custom-file-upload"> Subir archivo nuevo <i class="fas fa-upload"></i> </label>
+										<input id="file-upload" type="file" accept="image/gif, image/jpeg, image/webp, image/png"/>
+										<input type="hidden" id="foto_perfil">
+				     				</div>
+				     				<span>Tamaño recomendado: <b>200px x 200px</b></span>
+				     			</div>
+				     		</div>
+				     	</div>
+				     	<div class="form-group col-md-6">
+				     		<div class="form-group col-md-12 d-none">
+							  <label for="emailUSR">Correo</label>
+							  <input type="email" class="form-control" value="" id="emailUSR" disabled>
+							</div>
+
+							<div class="row">
+								<div class="col-md-3">
+									<img src="" class="bann_dsk" alt="image" loading="lazy">
+								</div>
+								<div class="col-md-9">
+									<span>Banner - Versión escritorio</span>
+									<div>
+										<label for="banndesk-upload" class="custom-file-upload">Subir imagen <i class="fas fa-upload"></i> </label>
+										<input id="banndesk-upload" type="file" accept="image/gif, image/jpeg, image/webp, image/png"/>
+										<input type="hidden" id="bann_desk">
+									</div>
+									<span>Tamaño recomendado: <b>1920px x 400px</b></span>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-md-3">
+									<img src="" class="bann_mob" alt="image" loading="lazy">
+								</div>
+								<div class="col-md-9">
+									<span>Banner - Versión móvil</span>
+									<div>
+										<label for="bannmob-upload" class="custom-file-upload">Subir imagen <i class="fas fa-upload"></i> </label>
+										<input id="bannmob-upload" type="file" accept="image/gif, image/jpeg, image/webp, image/png"/>
+										<input type="hidden" id="bann_mob">
+									</div>
+									<span>Tamaño recomendado: <b>600px x 600px</b></span>
+								</div>
+							</div>
+
+
+
+
+
+							
+				     	</div>
+
+				     	<div class="form-group col-md-12">
+				     		<button class="btn btn-primary btn-block" type="button" id="saveInfoUSR">Guardar cambios</button>
+				     	</div>
+				    </div>
+			        
+					
+					
+					<div class="form-row d-none">
+						<div class="form-group col-md-6">
+						  <label for="inputTipoDoc">Tipo de documento</label>
+						  <select id="inputTipoDoc" class="form-control" >
+						      <option value="DNI">DNI</option>
+						  </select>
+						</div> 
+						<div class="form-group col-md-6">
+						  <label for="numDoc">DNI</label>
+						  <input type="text" class="form-control" id="numDoc" maxlength="8" >
+						</div> 
+					</div> 
+					
+
+					<div class="form-row">
+						<!--
+						<div class="form-group col-md-12">
+						  <label>Género</label>
+						  <select id="inputGenero" class="form-control">
+						      <option selected value="Masculino">Masculino</option>
+						      <option value="Femenino">Femenino</option>
+						  </select>
+						</div>  form-group end.// -->
+
+						 <!-- form-group end.// -->
+
+						<!--
+						<div class="form-group col-md-12">
+						  <label>Celular de contacto</label>
+						  <input type="text" class="form-control" id="numCel" value="" maxlength="11">
+						</div> 
+						-->
+
+					</div> <!-- form-row.// -->
+
+					
+			      </form>
+
+			     
+
+
+			    </div>
+
+			    <!-- SECCION ADICIONAL -->
+			    <!--<br>
+			    <div class="card-body">
+			    	<div class="h4 mb-3">Adicional</div>
+
+			    	<div class="contenido_adic">
+			    		<table class="table tb_content_adic">
+			    			<tbody></tbody>
+			    		</table>
+			    	</div>
+			    </div>-->
+			    <!-- SECCION ADICIONAL -->
+
+
+
+		</article> <!-- order-group.// --> 
+
+		<article class="card tab-pane fade" id="mis_direcciones" role="tabpanel" aria-labelledby="v-mis_direcciones">
+			<div class="card-body">
+				<h4 class="card-title mb-4">Mis Direcciones</h4>
+				<div id="list_direcciones">
+					<div id="list_direcciones_contenido"></div>
+					<br><br>
+					<div class="col-md-12 text-center"> <button type="button" class="btn btn-primary" id="agregar_direccion"><i class="fas fa-plus-circle"></i> Agregar otra dirección</button> </div>
+				</div>
+				<div id="detalle_direcciones">
+					
+					<h2 class="title_direccion"></h2>
+
+					<div class="form-group col-md-12">
+					  <input type="hidden" id="id_dir">
+					  <input type="hidden" id="lat_dir">
+					  <input type="hidden" id="lng_dir">
+
+					  <!-- <label>Distrito</label>
+					  <select id="cliOpcZipCode" class="form-control"><option value="">Seleccione</option><option value="Ancón">Ancón</option><option value="Ate">Ate</option><option value="Barranco">Barranco</option><option value="Breña">Breña</option><option value="Carabayllo">Carabayllo</option><option value="Chaclacayo">Chaclacayo</option><option value="Chorrillos">Chorrillos</option><option value="Cieneguilla">Cieneguilla</option><option value="Comas">Comas</option><option value="El Agustino">El Agustino</option><option value="Independencia">Independencia</option><option value="Jesús María">Jesús María</option><option value="La Molina">La Molina</option><option value="La Victoria">La Victoria</option><option value="Lima">Lima</option><option value="Lince">Lince</option><option value="Los Olivos">Los Olivos</option><option value="Lurigancho">Lurigancho</option><option value="Lurin">Lurin</option><option value="Magdalena del Mar">Magdalena del Mar</option><option value="Miraflores">Miraflores</option><option value="Pachacamac">Pachacamac</option><option value="Pueblo Libre">Pueblo Libre</option><option value="Puente Piedra">Puente Piedra</option><option value="Rímac">Rímac</option><option value="San Borja">San Borja</option><option value="San Isidro">San Isidro</option><option value="San Juan de Lurigancho">San Juan de Lurigancho</option><option value="San Juan de Miraflores">San Juan de Miraflores</option><option value="San Luis">San Luis</option><option value="San Martín de Porres">San Martín de Porres</option><option value="San Miguel">San Miguel</option><option value="Santa Anita">Santa Anita</option><option value="Santiago de Surco">Santiago de Surco</option><option value="Surquillo">Surquillo</option><option value="Villa El Salvador">Villa El Salvador</option><option value="Villa María del Triunfo">Villa María del Triunfo</option></select> -->
+
+					  	<div class="row">
+			        		<div class="col-md-12">
+			        			<div class="form-group usr_ubigeo">
+			        				<div class="row">
+			        					<div class="col-md-4">
+			        						<label for="dept_usr">Departamento</label>
+				        					<select id="dept_usr"></select>
+				        				</div>
+				        				<div class="col-md-4">
+				        					<label for="prov_usr">Provincia</label>
+				        					<select id="prov_usr"></select>
+				        				</div>
+				        				<div class="col-md-4">
+				        					<label for="distr_usr">Distrito</label>
+				        					<select id="distr_usr"></select>
+				        				</div>
+			        				</div>
+								</div>
+			        		</div>
+			        		<!-- <div class="col-md-12">
+			        			<div class="zonasEnvio2 row"></div>
+			        		</div> -->
+			        	</div>
+
+
+					</div>
+
+					<div class="form-group col-md-12">
+					  <label for="direccion_u">Dirección</label>
+					  <div class="input-group">
+					  	<input type="text" class="form-control" id="direccion_u">
+					  	<!-- <div class="input-group-btn">
+        						<button class="btn btn-default" type="button" id="btn_srchd"><i class="fas fa-map-marker-alt"></i></button>
+      					</div> -->
+					  </div>
+					  
+					</div>
+
+					<div class="form-group col-md-12">
+					<!-- <div id="mapa_graph"></div> -->
+					</div>
+
+					<div class="form-group col-md-12">
+					  <label for="referencia_u">Piso, puerta o referencia para el delivery:</label>
+					  <input type="text" class="form-control" id="referencia_u">
+					</div>
+
+					<div class="form-group col-md-12 items_grd">
+						<div>Guardar esta dirección como:</div>
+						<div class="form-row">
+						<div class="col form-group">
+						  	<label class="custom-control custom-radio custom-control-inline" for="d1">
+							  <input class="custom-control-input" checked="" id="d1" type="radio" name="tipo_direccion" value="">
+							  <span class="custom-control-label txt_nom_dir">  </span>
+							</label>
+						</div> <!-- form-group end.// -->
+						<div class="col form-group">
+						  	<label class="custom-control custom-radio custom-control-inline" for="d2">
+							  <input class="custom-control-input" type="radio" id="d2" name="tipo_direccion" value="Otro">
+							  <span class="custom-control-label" style="width:95%"> <input type="text" id="otro_nom_add" class="form-control" placeholder="Otro nombre"> </span>
+							</label>
+						</div> <!-- form-group end.// -->
+						</div>
+					</div>
+
+					<div class="form-row buttons_action">
+						<button type="button" class="btn btn-outline-primary" id="cancel_edit">Cancelar</button>
+						<button type="button" class="btn btn-primary" id="save_edit">Guardar cambios</button>
+					</div>
+
+					<div class="form-row buttons_action2">
+						<button type="button" class="btn btn-outline-primary" id="cancel_edit2">Cancelar</button>
+						<button type="button" class="btn btn-primary" id="save_edit2">Guardar cambios</button>
+					</div>
+
+				</div>
+			</div>
+		</article> <!-- order-group.// --> 
+
+		<article class="card tab-pane fade" id="mis_disenos" role="tabpanel" aria-labelledby="v-mis_disenos">
+			<div class="container-fluid pt-3">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="h5 titl_catg">Diseños guardados</div>
+						<p>Elige un diseño</p>
+						<hr>
+					</div>
+
+				</div>
+			</div>
+			<div class="card-body">
+				
+
+				<div class="container-fluid mb-3">
+					<div class="row">
+						<input type="hidden" id="url_json">
+						<input type="hidden" id="url_image">
+
+            <input type="hidden" id="url_json_frontal">
+            <input type="hidden" id="url_image_frontal">
+
+            <input type="hidden" id="url_image_espalda">
+            <input type="hidden" id="url_image_aws_frontal">
+
+            <input type="hidden" id="url_image_aws_frontal_1">
+
+						<!-- <div class="col-6 col-md-6"> <h4 class="card-title mb-4">Mis Diseños</h4> </div> -->
+						<div class="col-12 col-md-4">
+							<div class="input-group flex-nowrap">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Busca por nombre" id="nombre_diseno" aria-label="Nombre">
+							</div>
+						</div>
+						<div class="col-12 col-md-4">
+							<select class="form-control" id="ordenar_disenos">
+								<option value="old">Ordenar por: Más antiguos</option>
+								<option value="new">Ordenar por: Últimos subidos</option>
+							</select>
+						</div>
+						<div class="col-12 col-md-4 text-right"> <a href="/info/page_design.html" class="btn btn-primary btn_newdsg"> Crear un diseño nuevo</a></div>
+					</div>
+				</div>
+				
+				<div class="container-fluid">
+					<div class="row results_dsg"></div>
+					<br>
+					<div id="pagination-cat1"></div>
+				</div>
+				
+			</div>
+		</article> <!-- order-group.// --> 
+
+
+		<article class="card tab-pane fade" id="vende_otros" role="tabpanel" aria-labelledby="v-vende_otros">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 pt-3">
+						<div class="h5 titl_catg">Mis ventas</div>
+						<!-- <p>Elige tu producto</p> -->
+						<hr>
+					</div>
+
+				</div>
+			</div>
+			<div class="card-body">
+				<!-- <h4 class="card-title mb-4">Mis Ventas</h4> -->
+				<div id="seccion_margenes" class="mb-3">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="marg_historic text-center">
+									<p class="h4"></p>
+									<div class="h6">Márgenes/Comisiones históricas</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 text-center">
+								<button type="button" class="btn btn-marg_pnd"><p class="h4"></p>
+								<div class="h6">Márgenes/Comisiones pendientes</div>
+								</button>
+							</div>
+
+							<div class="col-md-4 text-center">
+								<button type="button" class="btn btn-marg_dsp"><p class="h4"></p>
+								<div class="h6">Márgenes/Comisiones disponibles</div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="venta_pedidos"><!-- <img class="lodg" src="[[URL_CDN_STORAGE]]/images/icons/loading.gif" alt="loading" width="64" height="64" style="margin: 0 auto;display: block;"> --></div>
+				<div id="pagventas"></div>
+				<div id="detalle_venta"></div>
+			</div>
+		</article>
+
+
+		<article class="card tab-pane fade" id="mis_pedidos" role="tabpanel" aria-labelledby="v-mis_pedidos">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 pt-3">
+						<div class="h5 titl_catg">Mis compras</div>
+						<!-- <p>Elige tu producto</p> -->
+						<hr>
+					</div>
+
+				</div>
+			</div>
+		<div class="card-body">
+			<!--
+			<div id="list_pedidos"></div>
+			<div id="pagpedidos"></div>
+			<div id="detalle_pedido"></div>
+			-->
+		</div>
+		</article> <!-- order-group.// --> 
+
+		<article class="card tab-pane fade" id="sol_cobr" role="tabpanel" aria-labelledby="v-sol_cobr">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 pt-3">
+						<div class="h5 titl_catg">Solicitud de cobranzas</div>
+						<!-- <p>Elige tu producto</p> -->
+						<hr>
+					</div>
+
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3">
+							<label for="fecha_mes">Seleccione periodo (mes/año):</label>
+							<input type="text" class="form-control" id="fecha_mes">
+						</div>
+					</div>
+
+					<div class="row resumen_solc">
+						
+					</div>
+				</div>
+				<!--
+				<div id="seccion_ops" class="mb-3">
+					<div class="container-fluid">
+						<div class="row mgr1">
+							
+								<div class="col-md-6 marg_comisiones_totales mb-2">
+									<p class="h4"></p>
+									<div class="h6">Total de comisiones</div>
+									
+								</div>
+
+								<div class="col-md-6 marg_comisiones_cobradas mb-2">
+									<p class="h4"></p>
+									<div class="h6">Comisiones cobradas</div>
+									
+								</div>
+							
+						</div>
+
+						<div class="row mgr2">
+
+
+								<div class="col-md-6 marg_comisiones_pendientes mb-2">
+									<p class="h4"></p>
+									<div class="h6">Comisiones pendientes</div>
+									
+								</div>
+
+								<div class="col-md-6 marg_comisiones_disponibles mb-2">
+									<p class="h4"></p>
+									<div class="h6">Comisiones disponibles</div>
+									
+								</div>
+
+								
+							
+						</div>
+
+						<hr>
+
+						<div class="row tilte">
+							<div class="col-md-12">
+								<div class="h6">Lista de Órdenes</div>
+
+							</div>
+						</div>
+						<div class="list_odrn">
+							
+						</div>
+
+						<div class="detl_ordsn"></div>
+					</div>
+				</div>
+				-->
+
+			</div>
+		</article>
+
+		<article class="card tab-pane fade" id="mi_d_cuenta" role="tabpanel" aria-labelledby="v-mi_d_cuenta">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 pt-3">
+						<div class="h5 titl_catg">Forma de pago</div>
+						<!-- <p>Elige tu producto</p> -->
+						<hr>
+					</div>
+
+				</div>
+			</div>
+			<div class="card-body">
+				<input type="hidden" id="status_data_account">
+				<div id="form_account">
+					<!--
+					<div class="h5 pl-3 pr-3 mb-4">Tu perfil</div>
+
+					<div class="form-group row">
+					    <label for="nombre_cuenta" class="col-sm-2 col-form-label">Nombre de catálogo <span class="text-danger">*</span>:</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="nombre_cuenta" data-lbl="account_name">
+					    </div>
+				  	</div>
+
+				  	<div class="form-group row">
+					    <label for="url_account" class="col-sm-2 col-form-label">URL de catálogo <span class="text-danger">*</span>:</label>
+					    <div class="col-sm-10 form-inline">
+					      <span class="font-italic txt-w">[[URL_DOMAIN_DEFAULT]]/designer?d=</span><input type="text" class="form-control" id="url_account" data-lbl="account_url" readonly>
+					      <div class="d-block" style="flex: 0 0 100%;">
+					      	<div class="ldg d-none">
+					      		<img src="[[URL_CDN_STORAGE]]/images/icons/loading.gif" alt="loading" width="20" height="20" style="width:20px;height: 20px;">
+					      	</div>
+					      	<div class="alert alert-danger msg_exist_yes d-none" role="alert">
+							  Esta url ya existe, ingrese otra url
+							</div>
+							<div class="alert alert-success msg_exist_no d-none" role="alert">
+							  Url disponible
+							</div>
+					      </div>	
+					    </div>
+					    
+					</div>
+					-->
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+						    <label for="comision_account" class="col-form-label">Comisión (%) <span class="text-danger">*</span>:</label>
+						      <select class="form-control" id="comision_account" data-lbl="commission">
+						      	<option value="">Seleccione</option>
+						      	<option value="10">10%</option>
+						      	<option value="15">15%</option>
+						      	<option value="20">20%</option>
+						      	<option value="25">25%</option>
+						      	<option value="30">30%</option>
+						      	<option value="35">35%</option>
+						      	<option value="40">40%</option>
+						      	<option value="45">45%</option>
+						      	<option value="50">50%</option>
+						      </select>
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="entidad_bancaria" class="col-form-label">Entidad Bancaria:</label>
+					    
+						      <select id="entidad_bancaria" class="form-control" data-lbl="bank_entity">
+						      	<option value="">Seleccione</option>
+						      	<option value="BCP">BCP</option>
+						      	<option value="INTERBANK">INTERBANK</option>
+						      	<option value="BBVA">BBVA</option>
+						      	<option value="SCOTIABANK">SCOTIABANK</option>
+						      	<option value="OTRO">OTRO</option>
+						      </select>
+
+						      <div class="ent_bnk d-none mt-2">
+						      	<input type="text" class="form-control" id="ent_bnk_name" data-lbll="bank_entity">
+						      </div>
+
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="num_account" class="col-form-label">N° de cuenta:</label>
+						    <input type="text" class="form-control" id="num_account" data-lbl="bank_account">
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="cci_account" class="col-form-label">CCI:</label>
+					    	<input type="text" class="form-control" id="cci_account" data-lbl="bank_cci">
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="fono_yape" class="col-form-label">Yape:</label>
+						    <input type="text" class="form-control" id="fono_yape" data-lbl="fono_yape" maxlength="12">
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="fono_plin" class="col-form-label">Plin:</label>
+					      	<input type="text" class="form-control" id="fono_plin" data-lbl="fono_plin" maxlength="12">
+						</div>
+
+						<div class="form-group col-md-4">
+						</div>
+
+					</div>
+					<!--
+					<div class="form-group row">
+					    <label for="nombre_cuenta" class="col-sm-2 col-form-label">Foto de perfil:</label>
+					    <div class="col-sm-10">
+					      	
+				      		<div class="custom-file">
+						  		<input type="file" class="custom-file-input" id="picProfile" accept=".png, .jpg, .jpeg, .bmp, .webp" data-lbl="url_banner">
+						  		<label class="custom-file-label" for="picProfile">Seleccione...</label>
+							</div>
+							<span class="text-muted" style="font-size: 12px;"><em>Tamaño recomendado: 120x120</em></span>
+							<div class="img_fl3">
+								<img src="https://storage.googleapis.com/sspe-appv20-resources/2tupolo.samishop.pe/images/icons/icons_px.webp" style="width: 100px;height: 100px;">
+								
+							</div>
+
+					    </div>
+				  	</div>
+					
+					<div class="h5 pl-3 pr-3 mb-4">Forma de pago</div>
+					-->
+					<!--
+					<div class="form-group row">
+					    
+					</div>
+
+					<div class="form-group row">
+
+					</div>
+					<div class="form-group row">
+					    
+					</div>
+					
+					<div class="form-group row">
+					    
+					</div>
+
+					<div class="form-group row">
+					   
+					</div>
+					-->
+					<!--
+					<div class="form-group row">
+					    <label for="customFile" class="col-sm-2 col-form-label">Banner de catálogo:</label>
+					    <div class="col-sm-10">
+							<div class="row" style="margin-left: -15px;margin-right: -15px;">
+								<div class="col-md-6">
+									<div class="custom-file">
+							  			<input type="file" class="custom-file-input" id="customFile1" accept=".png, .jpg, .jpeg, .bmp, .webp" data-lbl="url_banner">
+							  			<label class="custom-file-label" for="customFile1">Seleccione...</label>
+							  			<span class="text-muted" style="font-size: 12px;"><em>Versión para escritorio</em></span>
+									</div>
+									<div class="img_fl1">
+										<img src="">
+										<div style="display: inline-block;" class="btnDel1"></div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="custom-file">
+									  <input type="file" class="custom-file-input" id="customFile2" accept=".png, .jpg, .jpeg, .bmp, .webp" data-lbl="url_banner_mobile">
+									  <label class="custom-file-label" for="customFile2">Seleccione...</label>
+									  <span class="text-muted" style="font-size: 12px;"><em>Versión para móvil</em></span>
+									</div>
+									<div class="img_fl2">
+										<img src="">
+										<div style="display: inline-block;" class="btnDel2"></div>
+									</div>
+								</div>
+							</div>
+					    </div>
+					</div>
+					-->
+
+				  	
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="h5 titl_catg">Redes sociales</div>
+						<!-- <p>Elige tu producto</p> -->
+						<hr>
+					</div>
+
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<label for="num_account" class="col-form-label">Facebook:</label>
+					    <input type="text" class="form-control" id="url_fb" data-lbl="url_fb">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="url_ig" class="col-form-label">Instagram:</label>
+					    <input type="text" class="form-control" id="url_ig" data-lbl="url_fb">
+					    
+					</div>
+					<div class="form-group col-md-4">
+						<label for="url_tw" class="col-form-label">Twitter:</label>
+					    <input type="text" class="form-control" id="url_tw" data-lbl="url_fb">
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="form-group row">
+			  		<span class="col-md-12 text-danger" style="font-size:12px;"><i>* Campo requerido</i></span>
+			  	</div>
+				<div class="form-group text-center">
+				  	<button type="button" id="btn_save_account_dt" class="btn btn-save_account_dt">Guardar configuración</button>
+				</div>
+			</div>
+
+
+		</article> 
+		</div>
+	</main>
+</div> <!-- row.// -->
+<!-- =========================  COMPONENT MYORDER 1 END.// ========================= --> 
+
+<br> <br>
+
+
+<div class="modal" id="borrarDiseno">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body text-center">
+       	<h5>¿Estás seguro(a) de borrar este diseño?</h5>
+        <div class="group_buttons">
+        	<button type="button" class="btn btn_volverDisgn" data-dismiss="modal"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Volver</button>
+        	<button type="button" class="btn btn_eliminarDisgn" id="delDiseno" data-iddiseno=""><i class="fas fa-times"></i>&nbsp;&nbsp;Eliminar diseño</button>
+        </div>	
       </div>
-      <div class="col-12 col-md-4 col-lg-4 col-xl-4"></div>
+
     </div>
-    <!-- card .// -->
   </div>
-  <!-- ============================ COMPONENT LOGIN  END.// ================================= -->
+</div>
+
+
+<div class="modal" id="cancelPedido">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body text-center">
+       	<h5>¿Estás seguro(a) de cancelar este pedido?</h5>
+        <div class="group_buttons">
+        	<button type="button" class="btn btn_volverPedidos" data-dismiss="modal"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Volver</button>
+        	<button type="button" class="btn btn_cancelPedidos" id="delPedido" data-idorder=""><i class="fas fa-times"></i>&nbsp;&nbsp;Cancelar pedido</button>
+        </div>	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="setDiseno"  data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+       	<h6>Ingresa opcionalmente un nombre y una descripción para tu diseño:</h6>
+       	<div class="form-group">
+			<input type="text" class="form-control" id="nom_dsg" maxlength="50" placeholder="Nombre de diseño">
+		</div>
+		<div class="form-group">
+			<textarea id="descp_dsg" class="form-control" rows="4" placeholder="Descripción"></textarea>
+		</div>
+        <div class="group_buttons text-right">
+        	<button type="button" class="btn btn_guardarandgo" data-xddiseno=""><i class="fas fa-arrow-alt-circle-right"></i>&nbsp;&nbsp;Continuar</button>
+        	<div><span id="msgupdate"></span></div>
+        </div>	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editarInfoD">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Editar información</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+      	<div class="form-group">
+      		<label for="nom_ds">Nombre</label>
+      		<input type="text" class="form-control" id="nom_ds">
+      	</div>
+      	<div class="form-group">
+      		<label for="nom_ds">Descripción</label>
+      		<textarea class="form-control" id="desc_ds"></textarea>
+      	</div>
+      	<!--
+      	<div class="form-group">
+      		<label for="nom_ds">Categorías</label>
+      		<input type="text" class="form-control" id="categ_ds">
+      	</div>
+      	<div class="form-group">
+      		<label for="nom_ds">Idioma</label>
+      		<input type="text" class="form-control" id="idioma_ds">
+      	</div>
+      	<div class="form-group">
+      		<label for="nom_ds">Tipo</label>
+      		<input type="text" class="form-control" id="tipo_ds">
+      	</div>
+      -->
+      	<div class="form-group">
+      		<label for="nom_ds">Etiquetas</label>
+      		<input type="text" class="form-control" id="tags_ds">
+      	</div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger" id="saveInfoDs">Guardar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="setProductosVender">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Productos</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Seleccione los productos para este diseño:
+        <br>
+        <ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item col">
+				<a class="nav-link active" data-toggle="tab" href="#prdH" role="tab">Hombre</a>
+			</li>
+			<li class="nav-item col">
+				<a class="nav-link" data-toggle="tab" href="#prdM" role="tab">Mujer</a>
+			</li>
+			<li class="nav-item col">
+				<a class="nav-link" data-toggle="tab" href="#prdN" role="tab">Niños</a>
+			</li>
+			<li class="nav-item col">
+				<a class="nav-link" data-toggle="tab" href="#prdAc" role="tab">Accesorios</a>
+			</li>
+			<li class="nav-item col">
+				<a class="nav-link" data-toggle="tab" href="#prdDe" role="tab">Deco</a>
+			</li>
+		</ul><!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane active" id="prdH" role="tabpanel">
+				<div class="form-check mt-3 mb-3">
+				  <label class="form-check-label" for="allH">
+				    <input type="checkbox" class="form-check-input allH" id="allH" value="">Seleccionar todo
+				  </label>
+				</div>
+				<div class="prdsH"></div>
+			</div>
+			<div class="tab-pane" id="prdM" role="tabpanel">
+				<div class="form-check mt-3 mb-3">
+				  <label class="form-check-label" for="allM">
+				    <input type="checkbox" class="form-check-input allM" id="allM" value="">Seleccionar todo
+				  </label>
+				</div>
+				<div class="prdsM"></div>
+			</div>
+			<div class="tab-pane" id="prdN" role="tabpanel">
+				<div class="form-check mt-3 mb-3">
+				  <label class="form-check-label" for="allN">
+				    <input type="checkbox" class="form-check-input allN" id="allN" value="">Seleccionar todo
+				  </label>
+				</div>
+				<div class="prdsN"></div>
+			</div>
+			<div class="tab-pane" id="prdAc" role="tabpanel">
+				<div class="form-check mt-3 mb-3">
+				  <label class="form-check-label" for="allAc">
+				    <input type="checkbox" class="form-check-input allAc" id="allAc" value="">Seleccionar todo
+				  </label>
+				</div>
+				<div class="prdsAc"></div>
+			</div>
+			<div class="tab-pane" id="prdDe" role="tabpanel">
+				<div class="form-check mt-3 mb-3">
+				  <label class="form-check-label" for="allDe">
+				    <input type="checkbox" class="form-check-input allDe" id="allDe" value="">Seleccionar todo
+				  </label>
+				</div>
+				<div class="prdsDe"></div>
+			</div>
+		</div>
+
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="saveInfo_Sale">Poner en venta</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</div> <!-- container .//  -->
 </section>
-<!-- ========================= SECTION CONTENT END// ========================= -->
-<!--
-<script src="[[URL_CDN_STORAGE_PRINCIPAL]]/js/social/login-google.js?v=[[VERSION_URL]]"async defer ></script>
-<script src="[[URL_CDN_STORAGE_PRINCIPAL]]/js/social/login-facebook.js?v=[[VERSION_URL]]"async defer ></script>
--->
-<script type="text/javascript">
-  var onloadCallback = function () {
-    grecaptcha.render("google_recaptcha", {
-      sitekey: "6LcxR1QfAAAAAA7YazmbNRKkKtDdT-yckZL3WDHo",
-    });
-  };
-</script>
-
-<script>
-  const c_name_token = "account_login";
-  const c_name_domain_default = "account_login_domain_default";
-
-  document.getElementById("button_login").addEventListener("click", CheckLogin);
-
-  verificar_automaticamente_session_redes_sociales();
-
-  async function verificar_automaticamente_session_redes_sociales() {
-    const queryParams = new URLSearchParams(window.location.search);
-    const tipo_login = JSON.parse(queryParams.get("state"));
-
-    if (typeof tipo_login === "undefined" || tipo_login === null) {
-      return;
-    }
-
-    let url_api_back = document.getElementById("url_api_back").value;
-    const dominio = $("#urlDomainDefault").attr("content");
-    const codigo = queryParams.get("code");
-
-    const datos = {
-      codigo,
-      dominio,
-    };
-
-    let response = null;
-
-    if (tipo_login.tipo_login === "google.com") {
-      url_api_back = url_api_back + "/users/cliente/acceso/google";
-
-      response = await fetch(url_api_back, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(datos),
-      });
-    } else if (tipo_login.tipo_login === "facebook.com") {
-      url_api_back = url_api_back + "/users/cliente/acceso/facebook";
-
-      response = await fetch(url_api_back, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(datos),
-      });
-    }
-
-    if (response != null && response.ok) {
-      let result = await response.json();
-      const data = result.obj[0];
-      const login_status = result.bEstado;
-
-      if (login_status === true) {
-        const token_access = data.token_acceso;
-        const token_time = data.token_tiempo;
-        const domain_default = data.domainio_defecto;
-
-        crear_cookie_accesso(c_name_token, token_access, token_time);
-        crear_cookie_dominio(c_name_domain_default, domain_default, token_time);
-
-        //window.location.href = "../mi_perfil";
-        window.location.href = "/";
-      } else {
-        var codigo_error = result.iCodigo;
-        if (codigo_error == "ERROR_VERIFICAR_CREDENCIALES") {
-          mesagge_login.textContent = "Credenciales incorrectas";
-        } else if (codigo_error == "ERROR_NO_EXISTE_USUARIO") {
-          mesagge_login.textContent = "Credenciales incorrectas";
-        }
-      }
-    } else {
-      mesagge_login.textContent = "Ha ocurrido un error en el servicio";
-    }
-  }
-  async function CheckLogin() {
-    let url_api_back = document.getElementById("url_api_back").value;
-
-    const login_email = document.getElementById("login_email").value;
-    const login_password = document.getElementById("login_password").value;
-    const login_domain = $("#urlDomainDefault").attr("content");
-
-    let mesagge_login = document.getElementById("mesagge_login");
-
-    /*  if (!grecaptcha.getResponse()) {
-      mesagge_login.textContent = "Por favor confirma el captcha";
-      return;
-    } */
-
-    const datos = {
-      correo: login_email,
-      contrasena: login_password,
-      dominio: login_domain,
-    };
-
-    url_api_back = url_api_back + "/users/cliente/acceso";
-
-    const response = await fetch(url_api_back, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(datos),
-    });
-
-    if (response.ok) {
-      let result = await response.json();
-      const data = result.obj[0];
-      const login_status = result.bEstado;
-
-      if (login_status === true) {
-        const token_access = data.token_acceso;
-        const token_time = data.token_tiempo;
-        const domain_default = data.domainio_defecto;
-
-        crear_cookie_accesso(c_name_token, token_access, token_time);
-        crear_cookie_dominio(c_name_domain_default, domain_default, token_time);
-
-        //window.location.href = "../mi_perfil";
-        if($.cookie("account_login")!=null && localStorage.getItem("pasar") != null){
-          localStorage.removeItem("pasar");
-		      window.location.href = "/process/checkout.html";
-	      }else{
-          window.location.href = "/info/MyAccount"
-        }
-      } else {
-        var codigo_error = result.iCodigo;
-
-        if (codigo_error == "ERROR_VERIFICAR_CREDENCIALES") {
-          grecaptcha.reset();
-          mesagge_login.textContent = "Credenciales incorrectas";
-        } else if (codigo_error == "ERROR_NO_EXISTE_USUARIO") {
-          grecaptcha.reset();
-          mesagge_login.textContent = "Credenciales incorrectas";
-        }
-      }
-    } else {
-      mesagge_login.textContent = "Ha ocurrido un error en el servicio";
-      //console.log(result);
-    }
-  }
-
-  function crear_cookie_accesso(c_name, value, time_default) {
-    // var expires = "";
-    // var date = new Date();
-    // date.setTime(date.getTime() + (time_default));
-    // expires = "; expires=" + date.toUTCString();
-
-    // document.cookie = c_name + "=" + (JSON.stringify(value) || "")  + expires + "; path=/";
-
-    var date = new Date();
-    var minutes = 60;
-    date.setTime(date.getTime() + minutes * 60 * 1000);
-    $.cookie(c_name, value, { expires: date, path: "/" });
-  }
-
-  function crear_cookie_dominio(c_name_domain_default, value, time_default) {
-    // var expires = "";
-    // var date = new Date();
-    // date.setTime(date.getTime() + (time_default));
-    // expires = "; expires=" + date.toUTCString();
-
-    // document.cookie = c_name_domain_default + "=" + (JSON.stringify(value) || "")  + expires + "; path=/";
-
-    var date = new Date();
-    var minutes = 60;
-    date.setTime(date.getTime() + minutes * 60 * 1000);
-    $.cookie(c_name_domain_default, value, { expires: date, path: "/" });
-  }
-</script>
-
+<link href="https://idks-rsrs-content.s3.amazonaws.com/lab3/css/pagination.css" rel="stylesheet" type="text/css">
+<script src="https://idks-rsrs-content.s3.amazonaws.com/lab3/js/pagination.min.js"></script>
+<link href="https://idks-rsrs-content.s3.amazonaws.com/lab3/css/zebra_datepicker.min.css" rel="stylesheet" type="text/css">
+<script src="https://idks-rsrs-content.s3.amazonaws.com/lab3/js/zebra_datepicker.min.js"></script>
+<script src="https://s3.us-east-2.amazonaws.com/m.idakoos.com/js/miperfil2.js"></script>
 
 
 
@@ -1881,7 +2765,7 @@ figcaption.info .cant_prd{position: absolute; right: 5px; bottom: 10px;}
 <script src="https://idks-rsrs-content.s3.amazonaws.com/lab2/js/slide-menu.js"></script>
 <link href="https://idks-rsrs-content.s3.amazonaws.com/lab2/css/slide-menu.css" rel="stylesheet"/>
 
-<script src="https://s3.us-east-2.amazonaws.com/2idakoos-qa.samishop.pe/js/script3.js"></script>
+<script src="https://s3.us-east-2.amazonaws.com/m.idakoos.com/js/script3.js"></script>
 <script src="https://idks-rsrs-content.s3.amazonaws.com/idakoos2.0/js/header.js"></script>
 
 <script>
@@ -2016,7 +2900,7 @@ $(document).ready(function(){
             $(".notificaEmail").html("Ingresa un correo válido");
         } else if(correo!="" && testEmail.test(correo) ){
 
-            var hostname1 = $("#urlDomainDefault").attr("content");
+            var hostname1 = window.location.hostname.replace("www.","");
             var settings = {
               "url": "https://api-clients.samishop.pe/forms/field",
               "method": "PUT",
